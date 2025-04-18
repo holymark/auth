@@ -42,6 +42,7 @@ export default function SignIn({ onViewChange }: SignInProps) {
         router.push("/profile")
       }
     } catch (error) {
+      console.log(error)
       setFormError("An unexpected error occurred. Please try again.")
     } finally {
       setIsSubmitting(false)

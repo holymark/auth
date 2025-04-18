@@ -63,6 +63,7 @@ export default function SignUpForm({ onViewChange }: SignUpFormProps) {
         setFormError(result.message)
       }
     } catch (error) {
+      console.log(error)
       setFormError("An unexpected error occurred. Please try again.")
     } finally {
       setIsSubmitting(false)

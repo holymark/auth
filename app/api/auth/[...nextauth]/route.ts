@@ -17,8 +17,10 @@ const handler = NextAuth({
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
       },
-      // @ts-ignore @todo: fix this
+      // @ts-expect-error @todo: fix this
       async authorize(credentials: Record<"email" | "password", string | undefined>, request: Request) {
+        console.log("authorize", { credentials, request })
+
         if (!credentials.email || !credentials.password) {
           return null
         }
@@ -60,6 +62,7 @@ const handler = NextAuth({
       return session
     },
     async jwt({ token, user, account }) {
+      console.log("jwt", { token, user, account })
       if (user) {
         token.sub = user.id
         token.username = user.username
@@ -67,6 +70,8 @@ const handler = NextAuth({
       return token
     },
     async signIn({ user, account, profile }) {
+      console.log("signIn", { user, account, profile })
+
       if (account?.provider === "google") {
         try {
           await dbConnect()

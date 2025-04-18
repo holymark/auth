@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// Define a type for the cached object
 interface MongooseCache {
   conn: mongoose.Mongoose | null;
   promise: Promise<mongoose.Mongoose> | null;
@@ -19,7 +18,7 @@ if (!MONGODB_URI) {
 }
 
 // Initialize cached connection
-let cached: MongooseCache = global.mongoose ?? { conn: null, promise: null };
+const cached: MongooseCache = global.mongoose ?? { conn: null, promise: null };
 
 // Store the cached object in global scope
 if (!global.mongoose) {
