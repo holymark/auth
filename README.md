@@ -41,25 +41,25 @@ Before you begin, ensure you have the following installed:
 
 ## Installation
 1. **Clone the repository**:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/your-repo-name.git
    cd your-repo-name
-   \`\`\`
+   ```
 
 2. **Install dependencies**:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 3. **Set up MongoDB**:
    - If using a local MongoDB instance, ensure MongoDB is running on \`mongodb://localhost:27017\`.
    - If using MongoDB Atlas, get your connection string from the Atlas dashboard.
 
 4. **Configure environment variables**:
-   Create a \`.env.local\` file in the root directory and add the following:
+   Create a `.env.local` file in the root directory and add the following:
 
 ## Environment Variables
-\`\`\`env
+```env
 # MongoDB connection string
 MONGODB_URI=mongodb://localhost:27017/your-database-name
 
@@ -70,9 +70,9 @@ NEXTAUTH_SECRET=your_random_secret_key
 # Google OAuth credentials
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-\`\`\`
+```
 
-- Generate a \`NEXTAUTH_SECRET\` using a random string (e.g., \`openssl rand -base64 32\`).
+- Generate a `NEXTAUTH_SECRET` using a random string (e.g., `openssl rand -base64 32`).
 - Obtain \`GOOGLE_CLIENT_ID\` and \`GOOGLE_CLIENT_SECRET\` from the Google Cloud Console.
 
 ## Running the Application
@@ -89,7 +89,7 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
    \`\`\`
 
 ## Project Structure
-\`\`\`bash
+```bash
 ├── components/           # Reusable UI components
 ├── pages/                # Next.js pages
 │   ├── api/              # API routes (e.g., NextAuth)
@@ -102,7 +102,7 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 ├── next.config.js        # Next.js configuration
 ├── tailwind.config.js    # Tailwind CSS configuration
 ├── README.md             # This file
-\`\`\`
+```
 
 ## Frontend
 The frontend is built with **Next.js** and styled using **Tailwind CSS**. Key features include:
@@ -111,9 +111,8 @@ The frontend is built with **Next.js** and styled using **Tailwind CSS**. Key fe
   - Google OAuth button for quick authentication.
   - Error handling and loading states for better UX.
 - **Pages**:
-  - \`/auth/signin\`: Login page with credentials and Google login options.
-  - \`/auth/signup\`: Signup page for creating a new account.
-  - \`/dashboard\`: Protected route for authenticated users.
+  - `/`: Login page with credentials and Google login options.
+
 
 ## Backend
 The backend uses **Next.js API Routes** and **NextAuth.js** for authentication, with **MongoDB** for data persistence. Key features include:
@@ -123,17 +122,17 @@ The backend uses **Next.js API Routes** and **NextAuth.js** for authentication, 
   - Session management with NextAuth.js.
 - **MongoDB Integration**:
   - Stores user data (e.g., username, hashed password, Google account details).
-  - Configured via \`MONGODB_URI\` in the environment variables.
+  - Configured via `MONGODB_URI` in the environment variables.
 - **NextAuth.js**:
   - Supports Google Provider and Credentials Provider.
-  - Configured in \`pages/api/auth/[...nextauth].js\`.
+  - Configured in `app/api/auth/[...nextauth]/route.ts`.
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
 1. Fork the repository.
-2. Create a new branch (\`git checkout -b feature/your-feature\`).
-3. Commit your changes (\`git commit -m 'Add your feature'\`).
-4. Push to the branch (\`git push origin feature/your-feature\`).
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
 
 ## License
