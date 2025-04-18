@@ -42,8 +42,8 @@ Before you begin, ensure you have the following installed:
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/holymark/auth.git
+   cd auth
    ```
 
 2. **Install dependencies**:
@@ -91,13 +91,13 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 ## Project Structure
 ```bash
 ├── components/           # Reusable UI components
-├── pages/                # Next.js pages
+├──app/                # Next.js pages
 │   ├── api/              # API routes (e.g., NextAuth)
 │   ├── auth/             # Authentication pages (signin, signup)
-│   ├── _app.js           # Custom App component
+│   ├── page.tsx.          # Custom App component
 ├── public/               # Static assets
 ├── styles/               # Tailwind CSS and global styles
-├── utils/                # Utility functions and database connection
+├── lib/                # Utility functions and database connection
 ├── .env.local            # Environment variables
 ├── next.config.js        # Next.js configuration
 ├── tailwind.config.js    # Tailwind CSS configuration
