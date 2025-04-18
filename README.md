@@ -52,7 +52,7 @@ Before you begin, ensure you have the following installed:
    ```
 
 3. **Set up MongoDB**:
-   - If using a local MongoDB instance, ensure MongoDB is running on \`mongodb://localhost:27017\`.
+   - If using a local MongoDB instance, ensure MongoDB is running on `mongodb://localhost:27017`.
    - If using MongoDB Atlas, get your connection string from the Atlas dashboard.
 
 4. **Configure environment variables**:
@@ -73,20 +73,20 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 ```
 
 - Generate a `NEXTAUTH_SECRET` using a random string (e.g., `openssl rand -base64 32`).
-- Obtain \`GOOGLE_CLIENT_ID\` and \`GOOGLE_CLIENT_SECRET\` from the Google Cloud Console.
+- Obtain `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` from the Google Cloud Console.
 
 ## Running the Application
 1. **Start the development server**:
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
-   The app will be available at \`http://localhost:3000\`.
+   ```
+   The app will be available at `http://localhost:3000`.
 
 2. **Build for production**:
-   \`\`\`bash
+   ```bash
    npm run build
    npm run start
-   \`\`\`
+   ```
 
 ## Project Structure
 ```bash
