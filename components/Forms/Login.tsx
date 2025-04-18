@@ -138,7 +138,7 @@ export default function SignIn({ onViewChange }: SignInProps) {
         </Button>
 
         <div className="text-sm text-center">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <button
             type="button"
             className="text-gray-700 font-medium hover:underline transition-colors duration-200"

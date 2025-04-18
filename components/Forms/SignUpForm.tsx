@@ -161,7 +161,7 @@ export default function SignUpForm({ onViewChange }: SignUpFormProps) {
             className="mt-1 transition-all duration-200"
           />
           <label htmlFor="terms" className="text-sm text-gray-600">
-            I agree with AUTH-8's{" "}
+            I agree with AUTH-8&apos;s{" "}
             <Link href="#" className="text-gray-700 hover:underline transition-colors duration-200">
               Terms of Service
             </Link>
